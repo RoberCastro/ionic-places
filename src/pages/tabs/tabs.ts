@@ -1,23 +1,28 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-//import { ionicBootstrap } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+import { PlacesPage } from '../places/places';
+import { AddPage } from '../add/add';
+import { AroundPage } from '../around/around';
+import { FriendsPage } from '../friends/friends';
 
 /*
-  Generated class for the Tabs page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
+ Generated class for the Tabs tabs.
+ See https://angular.io/docs/ts/latest/guide/dependency-injection.html
+ for more info on providers and Angular 2 DI.
+ */
 @Component({
   selector: 'page-tabs',
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  tab1Root: any = PlacesPage;
+  tab2Root: any = AddPage;
+  tab3Root: any = AroundPage;
+  tab4Root: any = FriendsPage;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TabsPage');
+  constructor(public navCtrl: NavController) {
+
   }
 
 }
